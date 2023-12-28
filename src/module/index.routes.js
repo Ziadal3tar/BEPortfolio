@@ -98,6 +98,6 @@ export const appRouter = (app) => {
 
 
 
-    app.use(globalError)
+    // app.use(globalError)
     connection()
 }
