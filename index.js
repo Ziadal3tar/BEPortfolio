@@ -6,7 +6,8 @@ import express from 'express'
 const __direname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__direname, './config/.env') })
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000
+
 const app = express()
 import cors from "cors"
 var corsOption = {
