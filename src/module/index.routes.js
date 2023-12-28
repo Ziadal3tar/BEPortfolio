@@ -13,10 +13,10 @@ import ipinfo from 'ipinfo';
 
 export const appRouter = (app) => {
 
-    app.use(express.json())
-    app.use(expressIP().getIpInfoMiddleware);
-    app.use(cookieParser());
-    app.use(fingerprint());
+    // app.use(express.json())
+    // app.use(expressIP().getIpInfoMiddleware);
+    // app.use(cookieParser());
+    // app.use(fingerprint());
 
 
 
