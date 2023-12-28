@@ -6,9 +6,13 @@ export const appRouter = (app) => {
     app.use(cookieParser());
     app.use('/project', projectRouter)
     app.get('/', (req, res) => {
-        const visitCount = parseInt(req.cookies.visitCount) || 0;
-        res.cookie('visitCount', visitCount + 1, { maxAge: 365 * 24 * 60 * 60 * 1000 * 80, httpOnly: true });
-        res.send(req.cookies);
+      const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+  // Get the existing cookie or set a new one
+  const visitorCookie = req.cookies.visitor || Math.random().toString(36).substring(7);
+  res.cookie('visitor', visitorCookie, { maxAge: 365 * 24 * 60 * 60 * 1000 * 80, httpOnly: true });
+
+  res.send(`Hello, your IP address is ${ipAddress}. You have a unique visitor ID: ${visitorCookie}`);
     })
     connection()
 }
