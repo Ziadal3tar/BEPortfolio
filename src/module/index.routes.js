@@ -1,10 +1,8 @@
 import projectRouter from './project/project.routes.js'
-// import EV from './EV/EV.routes.js'
 import express from 'express'
 import cookieParser from 'cookie-parser';
 import fingerprint from 'express-fingerprint';
 import expressIP from 'express-ip';
-// import ipinfo from 'ipinfo';
 import connection from '../../DB/connection.js'
 import { asyncHandler, globalError } from '../services/asyncHandler.js'
 import visitorModel from '../../DB/model/visitor.model.js'
@@ -14,9 +12,9 @@ import { findOneAndUpdate, find, create } from '../../DB/DBMethods.js';
 export const appRouter = (app) => {
 
     app.use(express.json())
-    app.use(expressIP().getIpInfoMiddleware);
-    app.use(cookieParser());
-    app.use(fingerprint());
+    // app.use(expressIP().getIpInfoMiddleware);
+    // app.use(cookieParser());
+    // app.use(fingerprint());
 
 
 
@@ -91,11 +89,6 @@ export const appRouter = (app) => {
 
 
 
-    app.use(globalError)
+    // app.use(globalError)
     connection()
 }
-
-// export {
-//     projectRouter,
-//     EV
-// }
