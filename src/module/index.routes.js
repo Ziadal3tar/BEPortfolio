@@ -1,12 +1,12 @@
 import projectRouter from './project/project.routes.js'
 import express from 'express'
-import cookieParser from 'cookie-parser';
-import fingerprint from 'express-fingerprint';
-import expressIP from 'express-ip';
+// import cookieParser from 'cookie-parser';
+// import fingerprint from 'express-fingerprint';
+// import expressIP from 'express-ip';
 import connection from '../../DB/connection.js'
-import { asyncHandler, globalError } from '../services/asyncHandler.js'
-import visitorModel from '../../DB/model/visitor.model.js'
-import { findOneAndUpdate, find, create } from '../../DB/DBMethods.js';
+// import { asyncHandler, globalError } from '../services/asyncHandler.js'
+// import visitorModel from '../../DB/model/visitor.model.js'
+// import { findOneAndUpdate, find, create } from '../../DB/DBMethods.js';
 
 
 export const appRouter = (app) => {
