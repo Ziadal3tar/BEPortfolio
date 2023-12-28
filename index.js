@@ -1,7 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import dotenv from 'dotenv'
-import {appRouter} from './src/module/index.router.js'
+import { appRouter } from './src/module/index.routes.js'
 import express from 'express'
 const __direname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__direname, './config/.env') })
