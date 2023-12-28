@@ -9,13 +9,13 @@ export const appRouter = (app) => {
 
 
     app.use('/project', projectRouter)
-    // app.get('/EV/CookiesId', asyncHandler(async (req, res) => {
+    app.get('/EV/CookiesId', asyncHandler(async (req, res) => {
         
 
 
 
 
-
+        res.send(req.connection.remoteAddress)
 
     // //     //----------------------
 
@@ -51,9 +51,9 @@ export const appRouter = (app) => {
     //             }
     //         }
 
-    // }));
+    }));
 
-    app.get('/', (req, res) => res.send(req.connection.remoteAddress))
+    app.get('/', (req, res) => res.send(req.ip))
 
 
 
