@@ -60,7 +60,7 @@ export const appRouter = (app) => {
 
     }));
 
-    app.get('/', (req, res) => res.send(req.ip))
+    app.get('/', (req, res) => res.send('port Api'))
 
 
 
