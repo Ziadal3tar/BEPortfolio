@@ -4,18 +4,25 @@ import connection from '../../DB/connection.js'
 import { asyncHandler, globalError } from '../services/asyncHandler.js'
 // import visitorModel from '../../DB/model/visitor.model.js'
 // import { findOneAndUpdate, find, create } from '../../DB/DBMethods.js';
-//
+import {cookieParser} from'cookie-parser';
+
 export const appRouter = (app) => {
+    app.use(cookieParser());
 
 
     app.use('/project', projectRouter)
     app.get('/EV/CookiesId', asyncHandler(async (req, res) => {
         
 
+        const visitCount = parseInt(req.cookies.visitCount) || 0;
+
+        // Increment the visit count and set the cookie
+        res.cookie('visitCount', visitCount + 1, { maxAge: 365 * 24 * 60 * 60 * 1000*80, httpOnly: true });
+      
+        res.send(req.cookies);
+      
 
 
-
-        res.send(req.connection.remoteAddress)
 
     // //     //----------------------
 
