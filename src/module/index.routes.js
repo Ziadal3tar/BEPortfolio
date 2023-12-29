@@ -34,11 +34,11 @@ if (visited.length == 0) {
         return res.status(401).json({ message: "added failed" })
     }
 } else {
-
+let nweNumberOfVisits = visited[0].numberOfVisits + 1 
     let updateEV = await findOneAndUpdate({
         model: visitorModel,
         visitorId: visitorCookie,
-        data: {numberOfVisits:visited[0].numberOfVisits ++},
+        data: {numberOfVisits:nweNumberOfVisits},
         options: { new: true }
     })
     if (updateEV) {
