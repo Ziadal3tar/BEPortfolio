@@ -11,7 +11,7 @@ export const appRouter = (app) => {
       const ipAddress = req.headers['https://www.al3tar.me/ZPORTOFOLIO'] || req.connection.remoteAddress;
   const visitorCookie = req.cookies.visitor || Math.random().toString(36).substring(7);
   res.cookie('visitor', visitorCookie, { maxAge: 365 * 24 * 60 * 60 * 1000 * 80, httpOnly: true });
-  res.send(`Hello, your IP address is ${ipAddress}. You have a unique visitor ID: ${visitorCookie}`);
+//   res.send(`Hello, your IP address is ${ipAddress}. You have a unique visitor ID: ${visitorCookie}`);
 
 
 
