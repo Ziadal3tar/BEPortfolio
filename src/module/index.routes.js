@@ -1,7 +1,7 @@
 import projectRouter from './project/project.routes.js'
 import connection from '../../DB/connection.js'
 import { asyncHandler, globalError } from '../services/asyncHandler.js'
-import { findOneAndUpdate, find, create } from '../../../../DB/DBMethods.js';
+import { findOneAndUpdate, find, create } from '../../DB/DBMethods.js';
 
 import cookieParser from 'cookie-parser';
 import visitorModel from '../../DB/model/visitor.model.js';
