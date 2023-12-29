@@ -42,7 +42,7 @@ if (visited.length == 0) {
         options: { new: true }
     })
     if (updateEV) {
-        return res.status(201).json({ message: "updated", updateEV })
+        return res.status(201).json({ message: "updated", visited })
     } else {
         return res.status(401).json({ message: "updated failed" })
     }
