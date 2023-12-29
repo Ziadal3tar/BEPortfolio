@@ -55,9 +55,10 @@ export const appRouter = (app) => {
 
 
 //     }))
+app.get('/', (req, res) => res.send('portfolio apis!'))
+
     connection()
 }
-
 
 
 
