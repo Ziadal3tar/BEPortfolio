@@ -10,7 +10,7 @@ const visitorSchema = new Schema({
 
     numberOfVisits: {
         type: Number,
-        default:1,
+    
     },
     emailsContent: {
         type: [String],
