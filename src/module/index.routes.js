@@ -8,16 +8,16 @@ export const appRouter = (app) => {
     app.use(cookieParser());
     app.use('/project', projectRouter)
     app.get('/', asyncHandler(async(req, res) => {
-      const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+      const ipAddress = req.headers['https://www.al3tar.me/ZPORTOFOLIO'] || req.connection.remoteAddress;
   const visitorCookie = req.cookies.visitor || Math.random().toString(36).substring(7);
   res.cookie('visitor', visitorCookie, { maxAge: 365 * 24 * 60 * 60 * 1000 * 80, httpOnly: true });
-//   res.send(`Hello, your IP address is ${ipAddress}. You have a unique visitor ID: ${visitorCookie}`);
+  res.send(`Hello, your IP address is ${ipAddress}. You have a unique visitor ID: ${visitorCookie}`);
 
 
 
-req.body.visitorId = visitorCookie
-req.body.browserIp = ipAddress
-  res.send(req.body);
+// req.body.visitorId = visitorCookie
+// req.body.browserIp = ipAddress
+//   res.send(req.body);
 
 // let visited = []
 // const allEV = await find({ model: visitorModel })
