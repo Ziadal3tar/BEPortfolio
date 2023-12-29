@@ -38,7 +38,7 @@ if (visited.length == 0) {
     let updateEV = await findOneAndUpdate({
         model: visitorModel,
         visitorId: visitorCookie,
-        data: {numberOfVisits:visited[0].numberOfVisits + 1},
+        data: {numberOfVisits:visited[0].numberOfVisits ++},
         options: { new: true }
     })
     if (updateEV) {
