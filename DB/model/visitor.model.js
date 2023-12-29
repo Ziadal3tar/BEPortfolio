@@ -4,7 +4,7 @@ const visitorSchema = new Schema({
     visitorId: {
         type: String,
     },
-    browserIp: {
+    ipAddress: {
         type: String,
     },
 
