@@ -34,11 +34,11 @@ if (visited.length == 0) {
         return res.status(401).json({ message: "added failed" })
     }
 } else {
-    req.body.numberOfVisits = visited[0].numberOfVisits + 1
+
     let updateEV = await findOneAndUpdate({
         model: visitorModel,
         visitorId: visitorCookie,
-        data: req.body,
+        data: {numberOfVisits:visited[0].numberOfVisits + 1},
         options: { new: true }
     })
     if (updateEV) {
