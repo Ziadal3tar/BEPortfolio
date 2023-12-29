@@ -4,9 +4,10 @@ const visitorSchema = new Schema({
     visitorId: {
         type: String,
     },
-    device: {
+    browserIp: {
         type: String,
     },
+
     numberOfVisits: {
         type: Number,
         default:1,
