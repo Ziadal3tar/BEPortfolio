@@ -6,7 +6,7 @@ import connection from '../../DB/connection.js'
 // import cookieParser from 'cookie-parser';
 // import visitorModel from '../../DB/model/visitor.model.js';
 export const appRouter = (app) => {
-    app.use(cookieParser());
+    // app.use(cookieParser());
     app.use('/project', projectRouter)
 //     app.get('/', asyncHandler(async(req, res) => {
 //       const ipAddress = req.headers['https://www.al3tar.me/ZPORTOFOLIO'] || req.connection.remoteAddress;
